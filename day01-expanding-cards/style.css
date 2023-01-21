@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; 
+    margin: 0; 
+}
+
+.container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    overflow: auto; 
+    width: 90vw; 
+
+}
+
+.card {
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 80vh; 
+    border-radius: 50px; 
+    color: white; 
+    cursor: pointer;
+    text-align: center; 
+    font-weight: normal;
+    flex: 0.5; 
+    margin: 10px; 
+    position: relative; 
+    transition: flex 0.7s ease-in; 
+}
+
+#card1 {
+    background-image: url("https://images.unsplash.com/photo-1674227640462-93919348eecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"); 
+}
+
+#card2 {
+    background-image: url("https://images.unsplash.com/photo-1673831791756-54f5e1c337c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80");
+
+}
+
+#card3 {
+    background-image: url("https://images.unsplash.com/photo-1673903069929-3fe81178638b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2030&q=80")
+}
+
+#card4 {
+    background-image: url("https://images.unsplash.com/photo-1673646384080-0dd8da7edf2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+
+#card5 {
+    background-image: url("https://images.unsplash.com/photo-1673831792426-8cedbe848c34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80");
+}
+
+
+h3 {
+    position: absolute; 
+    font-size: 24px; 
+    bottom: 20px; 
+    left: 20px; 
+    margin: 0; 
+    opacity: 0; 
+}
+.active {
+    flex: 5; 
+}
+
+.active h3 {
+    opacity: 100%; 
+    transition: opacity 0.3s ease-in 0.4s; 
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw; 
+    }
+
+    .card:nth-of-type(4), 
+    .card:nth-of-type(5){
+        display: none;
+    }
+}
